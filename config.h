@@ -91,7 +91,8 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.92;
+float alpha = 1.0;
+float alphaUnfocussed = 0.6;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -194,6 +195,7 @@ ResourcePref resources[] = {
 		{ "cwscale",      FLOAT,   &cwscale },
 		{ "chscale",      FLOAT,   &chscale },
 		{ "alpha",        FLOAT,   &alpha },
+		{ "alphaUnfocussed",	FLOAT,	&alphaUnfocussed },
 		{ "ximspot_update_interval", INTEGER, &ximspot_update_interval },
 };
 
